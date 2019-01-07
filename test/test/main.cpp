@@ -6,6 +6,8 @@
 
 #include <Windows.h>
 
+#include "ShaderManager.h"
+
 //cpp file
 #define internal static
 //function
