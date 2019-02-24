@@ -83,7 +83,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\dependencies\include\glm;$(ProjectDir)..\dependencies\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\dependencies\include\glm;$(ProjectDir)..\dependencies\include\GL;$(ProjectDir)ext\freetype\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;WIN32;_LIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -111,7 +111,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\dependencies\include\glm;$(ProjectDir)..\dependencies\include\GL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\dependencies\include\glm;$(ProjectDir)..\dependencies\include\GL;$(ProjectDir)ext\freetype\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>FT2_BUILD_LIBRARY;WIN32;_LIB;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -137,13 +137,97 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BatchRenderer.cpp" />
+    <ClCompile Include="Buffer.cpp" />
+    <ClCompile Include="EngineUtilities.cpp" />
+    <ClCompile Include="ext\freetype-gl\platform.c" />
+    <ClCompile Include="ext\freetype-gl\texture-atlas.c" />
+    <ClCompile Include="ext\freetype-gl\texture-font.c" />
+    <ClCompile Include="ext\freetype-gl\vector.c" />
+    <ClCompile Include="ext\freetype\src\autofit\autofit.c" />
+    <ClCompile Include="ext\freetype\src\base\ftbase.c" />
+    <ClCompile Include="ext\freetype\src\base\ftbbox.c" />
+    <ClCompile Include="ext\freetype\src\base\ftbitmap.c" />
+    <ClCompile Include="ext\freetype\src\base\ftdebug.c" />
+    <ClCompile Include="ext\freetype\src\base\ftfstype.c" />
+    <ClCompile Include="ext\freetype\src\base\ftgasp.c" />
+    <ClCompile Include="ext\freetype\src\base\ftglyph.c" />
+    <ClCompile Include="ext\freetype\src\base\ftgxval.c" />
+    <ClCompile Include="ext\freetype\src\base\ftinit.c" />
+    <ClCompile Include="ext\freetype\src\base\ftlcdfil.c" />
+    <ClCompile Include="ext\freetype\src\base\ftmm.c" />
+    <ClCompile Include="ext\freetype\src\base\ftotval.c" />
+    <ClCompile Include="ext\freetype\src\base\ftpatent.c" />
+    <ClCompile Include="ext\freetype\src\base\ftpfr.c" />
+    <ClCompile Include="ext\freetype\src\base\ftstroke.c" />
+    <ClCompile Include="ext\freetype\src\base\ftsynth.c" />
+    <ClCompile Include="ext\freetype\src\base\ftsystem.c" />
+    <ClCompile Include="ext\freetype\src\base\fttype1.c" />
+    <ClCompile Include="ext\freetype\src\base\ftwinfnt.c" />
+    <ClCompile Include="ext\freetype\src\base\ftxf86.c" />
+    <ClCompile Include="ext\freetype\src\bdf\bdf.c" />
+    <ClCompile Include="ext\freetype\src\cache\ftcache.c" />
+    <ClCompile Include="ext\freetype\src\cff\cff.c" />
+    <ClCompile Include="ext\freetype\src\cid\type1cid.c" />
+    <ClCompile Include="ext\freetype\src\gzip\ftgzip.c" />
+    <ClCompile Include="ext\freetype\src\lzw\ftlzw.c" />
+    <ClCompile Include="ext\freetype\src\pcf\pcf.c" />
+    <ClCompile Include="ext\freetype\src\pfr\pfr.c" />
+    <ClCompile Include="ext\freetype\src\psaux\psaux.c" />
+    <ClCompile Include="ext\freetype\src\pshinter\pshinter.c" />
+    <ClCompile Include="ext\freetype\src\psnames\psmodule.c" />
+    <ClCompile Include="ext\freetype\src\raster\raster.c" />
+    <ClCompile Include="ext\freetype\src\sfnt\sfnt.c" />
+    <ClCompile Include="ext\freetype\src\smooth\smooth.c" />
+    <ClCompile Include="ext\freetype\src\truetype\truetype.c" />
+    <ClCompile Include="ext\freetype\src\type1\type1.c" />
+    <ClCompile Include="ext\freetype\src\type42\type42.c" />
+    <ClCompile Include="ext\freetype\src\winfonts\winfnt.c" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="FontManager.cpp" />
+    <ClCompile Include="IndexBuffer.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Renderable.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderManager.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="Tile.cpp" />
+    <ClCompile Include="TiledMapManager.cpp" />
+    <ClCompile Include="TileMap.cpp" />
+    <ClCompile Include="VertexArray.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BatchRenderer.h" />
+    <ClInclude Include="Buffer.h" />
+    <ClInclude Include="EngineUtilities.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="FontManager.h" />
+    <ClInclude Include="IndexBuffer.h" />
+    <ClInclude Include="rapidxml.hpp" />
+    <ClInclude Include="rapidxml_iterators.hpp" />
+    <ClInclude Include="rapidxml_print.hpp" />
+    <ClInclude Include="rapidxml_utils.hpp" />
+    <ClInclude Include="Renderable.h" />
+    <ClInclude Include="RendererBase.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderManager.h" />
+    <ClInclude Include="stb_image.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="Tile.h" />
+    <ClInclude Include="TiledMapManager.h" />
+    <ClInclude Include="TileMap.h" />
+    <ClInclude Include="VertexArray.h" />
+    <ClInclude Include="XMLLayer.h" />
+    <ClInclude Include="XMLMap.h" />
+    <ClInclude Include="XMLTile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\forwardVertex.glsl" />
+    <None Include="Shaders\fragmentVertex.glsl" />
+    <None Include="Shaders\simpleFragment.glsl" />
+    <None Include="Shaders\simpleVertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
