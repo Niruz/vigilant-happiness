@@ -20,9 +20,9 @@ TiledMapManager* TiledMapManager::Instance()
 void TiledMapManager::onInitialize()
 {
 	//"Tilesets/cemetarytileset.tsx"
-	LoadTileset("Tilesets/cemetarytileset.tsx", "CemetaryTileset");
-	LoadTileset("Tilesets/bridgetileset.tsx", "BridgeTileset");
-	LoadTileset("Tilesets/dungeontileset.tsx", "DungeonTileset");
+	LoadTileset("Levels/cemetarytileset.tsx", "CemetaryTileset");
+	LoadTileset("Levels/bridgetileset.tsx", "BridgeTileset");
+	LoadTileset("Levels/dungeontileset.tsx", "DungeonTileset");
 
 	//Layers
 	LoadLayers("Levels/cemetary.tmx", "CemetaryLayer");

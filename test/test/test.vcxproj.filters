@@ -67,6 +67,39 @@
     <Filter Include="Resource Files\ext\freetype\freetype-gl">
       <UniqueIdentifier>{13f93c90-55ad-4b1d-8a2c-b165375a547b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{3b5ad199-3750-4ac6-bbf9-7ef089260191}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{ebc61c5b-040e-41a1-a27d-47be6af2a899}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Message">
+      <UniqueIdentifier>{a99fdde8-127f-4e8b-9d2b-1d034045f9fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{7dd181b1-d7ee-4087-8969-9bd80d269951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{a7568802-face-457a-8a6c-eed4d50925df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{9f8c7ae5-5888-4335-8f29-d3c1181c8644}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Renderer\Animation">
+      <UniqueIdentifier>{0864c3ad-9f53-4d4d-9824-645c62bb0611}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Layers">
+      <UniqueIdentifier>{ff13360f-35c2-45de-98cd-201dacf1fd0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Games">
+      <UniqueIdentifier>{bc47d15c-9ae5-4057-8f31-ca9c28b2e2cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World">
+      <UniqueIdentifier>{1f3e7c9c-7999-448b-bb03-a1d809caa8fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Games\Levels">
+      <UniqueIdentifier>{c287985f-903b-4d69-8137-9cd88863923e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -246,6 +279,57 @@
     <ClCompile Include="Renderable.cpp">
       <Filter>Graphics\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleTimer.cpp">
+      <Filter>Miscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageDispatcher.cpp">
+      <Filter>Message</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Graphics\Renderer\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimatedSprite.cpp">
+      <Filter>Graphics\Renderer\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Graphics\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>Graphics\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Graphics\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Shake.cpp">
+      <Filter>Graphics\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="Layer.cpp">
+      <Filter>Graphics\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="Group.cpp">
+      <Filter>Graphics\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="RaveGame.cpp">
+      <Filter>Games</Filter>
+    </ClCompile>
+    <ClCompile Include="Level1.cpp">
+      <Filter>Games\Levels</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ShaderManager.h">
@@ -319,6 +403,72 @@
     </ClInclude>
     <ClInclude Include="RendererBase.h">
       <Filter>Graphics\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleTimer.h">
+      <Filter>Miscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageDispatcher.h">
+      <Filter>Message</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>Message</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="AABB.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Graphics\Renderer\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimatedSprite.h">
+      <Filter>Graphics\Renderer\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Graphics\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.h">
+      <Filter>Graphics\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Graphics\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Shake.h">
+      <Filter>Graphics\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="RaveGame.h">
+      <Filter>Games</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Graphics\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="Group.h">
+      <Filter>Graphics\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="Level1.h">
+      <Filter>Games\Levels</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

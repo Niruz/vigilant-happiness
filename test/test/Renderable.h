@@ -22,12 +22,13 @@ public:
 	//glm::vec4 myColor;
 	unsigned int myColor;
 	std::vector<glm::vec2> myUVs;
-	Texture* myTexture;
+	//Texture* myTexture;
+	int myTexture;
 	float myInvertColor;
 	bool myMarkedForDeletion;
 
 protected:
-	Renderable() : myTexture(nullptr)
+	Renderable() : myTexture(-1)
 	{
 		SetUVDefaults();
 	}
@@ -35,12 +36,12 @@ protected:
 public:
 
 	Renderable(const glm::vec4& position, const glm::vec2& size, const unsigned int& color)
-		: myPosition(position), mySize(size), myColor(color), myTexture(nullptr), myInvertColor(0), myMarkedForDeletion(false)
+		: myPosition(position), mySize(size), myColor(color), myTexture(-1), myInvertColor(0), myMarkedForDeletion(false)
 	{
 		SetUVDefaults();
 	}
 	Renderable(const glm::vec4& position, const glm::vec2& size, const glm::vec4& color)
-		: myPosition(position), mySize(size), myTexture(nullptr), myInvertColor(0), myMarkedForDeletion(false)
+		: myPosition(position), mySize(size), myTexture(-1), myInvertColor(0), myMarkedForDeletion(false)
 	{
 		SetColor(color);
 		SetUVDefaults();
@@ -70,14 +71,14 @@ public:
 	//The index in the texture Atlas to set
 	void SetUVs(int row, int column);
 	void SetUVs(int index, int width, int height);
-	void SetTexture(Texture* texture) { myTexture = texture; }
+	void SetTexture(Texture* texture) { myTexture = texture->getID(); }
 	void SetPosition(const glm::vec4& position) { myPosition = position; }
 	void SetInverted(int inverted) { myInvertColor = inverted; }
 	inline const glm::vec4& GetPosition()			 const { return myPosition; }
 	inline const glm::vec2& GetSize()                const { return mySize; }
 	inline const unsigned int GetColor()               const { return myColor; }
 	inline const std::vector<glm::vec2>& GetUVs()    const { return myUVs; }
-	inline const GLuint GetTID() const { return myTexture ? myTexture->getID() : 0; }
+	inline const GLuint GetTID() const { return myTexture; }
 	inline const float GetInvertColor() const { return myInvertColor; }
 
 private:

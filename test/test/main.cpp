@@ -16,6 +16,8 @@
 #include "TextureManager.h"
 #include "ShaderManager.h"
 #include "FontManager.h"
+#include "TiledMapManager.h"
+#include "TileMap.h"
 
 typedef HGLRC WINAPI wglCreateContextAttribsARB_type(HDC hdc, HGLRC hShareContext,
 	const int *attribList);
@@ -295,6 +297,7 @@ WinMain(HINSTANCE inst, HINSTANCE prev, LPSTR cmd_line, int show)
 	ShaderMan->onInitialize();
 	TextureMan->onInitialize();
 	FontMan->onInitialize();
+	TiledMan->onInitialize();
 
 
 	// set up vertex data (and buffer(s)) and configure vertex attributes
@@ -336,6 +339,9 @@ WinMain(HINSTANCE inst, HINSTANCE prev, LPSTR cmd_line, int show)
 
 	Texture* myTexture = TextureMan->GetTexture("test");
 
+	TileMap* myMap = new TileMap("BridgeMap", "BridgeTileset");
+
+	myMap->printMap();
 
 
 	bool running = true;
@@ -380,6 +386,7 @@ WinMain(HINSTANCE inst, HINSTANCE prev, LPSTR cmd_line, int show)
 	ShaderMan->onDeinitialize();
 	TextureMan->onDeinitialize();
 	FontMan->onDeinitialize();
+	TiledMan->onDeinitialize();
 
 
 	return 0;
